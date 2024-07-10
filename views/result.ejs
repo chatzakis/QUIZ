@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<%- include("partials/header.ejs")  %>
+
+<body>
+  <section id="result">
+    <div class="container my-5">
+        <div class="row align-items-center mb-2">
+            <div class="score text-center">Your final score is: <br><span class="blue-glow num"><%= points %></span> points</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="correctAnswers text-center">Your answered correctly <span class="blue-glow num"><%= correctAnswers %></span> questions</div>
+        </div>
+    </div>
+    <div class="container play-btns">
+        <div class="row align-items-center">
+            <button id="replay" class="btn btn-primary m-2"><i class="fa-solid fa-rotate-right"></i> Replay</button>
+            <button id="new" class="btn btn-primary m-2"><i class="fa-solid fa-gamepad"></i> New game</button>
+        </div>
+    </div>        
+</section>
+
+<script type="text/javascript" src="client.js"></script>
+<%- include("partials/footer.ejs")  %>
+
+</html>

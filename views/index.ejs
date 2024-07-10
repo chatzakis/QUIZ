@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<%- include("partials/header.ejs") %>
+
+    <body>
+        <section id="content">
+            <div class="container">
+                <div class="row text-center p-0 mb-2">
+                    <h1 class="game-title magenta-glow">The X Quiz</h1>
+                    <p>A 10 questions Quiz</p>
+                </div>
+            </div>
+            <div class="container form-container">
+                <form id="quiz-settings" class="text-center" method="post">
+                    <div class="mb-3">
+                        <label for="category-select" class="form-label">Select <em>category</em></label>
+                        <select id="category-select" name="category" class="form-select"
+                            aria-label="Select question category">
+                            <option selected value="">All categories</option>
+                            <option value="music">🎵 Music</option>
+                            <option value="sport_and_leisure">🏀 Sports & Leisure</option>
+                            <option value="film_and_tv">🎬 Film & TV</option>
+                            <option value="arts_and_literature">✒️ Arts & Literature</option>
+                            <option value="history">🏛️ History</option>
+                            <option value="society_and_culture">🗽 Society & Culture</option>
+                            <option value="science">🧪 Science</option>
+                            <option value="geography">🌏 Geography</option>
+                            <option value="food_and_drink">🍕 Food & Drink</option>
+                            <option value="general_knowledge">❓ General knowledge</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="difficulty-select" class="form-label">Select <em>difficulty</em></label>
+                        <select id="difficulty-select" name="difficulty" class="form-select"
+                            aria-label="Select question category">
+                            <option selected value="">All difficulties</option>
+                            <option value="easy">🥉 Easy</option>
+                            <option value="medium">🥈 Medium</option>
+                            <option value="hard">🥇 Hard</option>
+                        </select>
+                    </div>
+                    <div class="my-4 d-grid">
+                        <button type="submit" class="btn btn-primary" formaction="/settings"><i
+                                class="fa-solid fa-gamepad"></i> Play</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </section>
+
+        <script type="text/javascript" src="client.js"></script>
+        <%- include("partials/footer.ejs") %>
+
+</html>

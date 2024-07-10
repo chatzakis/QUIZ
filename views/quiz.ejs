@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<%- include("partials/header.ejs") %>
+
+  <body>
+    <section id="content">
+      <div class="row restart-container align-items-center my-2">
+        <button id="home" class="btn btn-dark home-btn"><i class="fa-solid fa-house"></i>  Home page</button>
+      </div>
+      <div class="container-fluid">
+        <div class="row p-0 mb-2">
+          <div class="col-6 p-0">
+            <div class="counter magenta-glow">Question: <span class="num">
+                <%= counter %>
+              </span></div>
+          </div>
+          <div class="col-6 p-0">
+            <div class="score text-end blue-glow">Score: <span class="num">
+                <%= score %>
+              </span></div>
+          </div>
+        </div>
+        <div class="row align-items-center p-0 narration">
+          <div class="col-lg p-0">
+            <div class="question-text">
+              <%= question %>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row buttons p-0">
+          <div class="col-lg d-grid gap-2 p-2">
+            <button id="#ans1" class="btn btn-primary answer-btn">
+              <%= ans1 %>
+            </button>
+            <button id="#ans3" class="btn btn-primary answer-btn">
+              <%= ans3 %>
+            </button>
+          </div>
+          <div class="col-lg d-grid gap-2 p-2">
+            <button id="#ans2" class="btn btn-primary answer-btn">
+              <%= ans2 %>
+            </button>
+            <button id="#ans4" class="btn btn-primary answer-btn">
+              <%= ans4 %>
+            </button>
+          </div>
+        </div>
+        <div class="text-center feedback p-1">
+          <div class="feedback-text my-2"></div>
+          <div class="show-correct my-2">The correct answer is: <br><span id="correct-answer"></span></div>
+        </div>
+        <div class="next-container">
+          <button id="next" class="btn btn-dark"><i class="fa-solid fa-forward"></i> Next</button>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="client.js"></script>
+    <%- include("partials/footer.ejs") %>
+
+</html>

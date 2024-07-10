@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<%- include("partials/header.ejs") %>
+
+    <body>
+        <section id="content">
+            <div class="container">
+                <div class="row text-center p-0 mb-2">
+                    <h1 class="game-title magenta-glow">Error loading questions...</h1>
+                    <p>Check your internet connection or try again later</p>
+                </div>
+            </div>
+            <div class="container form-container">
+                <form id="error-reload" class="text-center" method="get">
+                    <div class="mb-3 d-grid">
+                        <button type="submit" class="btn btn-primary" formaction="/"><i class="fa-solid fa-gamepad"></i> Try again</button>
+                    </div>
+                </form>
+
+        </section>
+
+        <script type="text/javascript" src="client.js"></script>
+        <%- include("partials/footer.ejs") %>
+
+</html>

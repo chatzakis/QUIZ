@@ -1,0 +1,163 @@
+/* Change color and Fonts in root ↙ */
+:root {
+    /* Main colors */
+    --primary: #111;
+    --secontary: #444444;
+    --secontary-transparent: #444444aa;
+    --accent: DodgerBlue;
+    --accent-hover: DeepSkyBlue;
+    --accent2: Magenta;
+    --transparent-black: #1119;
+    --hover-transparent: #2229;
+    --light-background: #e5e5e5;
+    --light-font: #eee;
+    /* Fonts */
+    --main-text-font: "Ubuntu", sans-serif;
+    --button-font: "Ubuntu", sans-serif;
+    --neon-font: "Tilt Neon", sans-serif;
+    --main-font-color: var(--light-font);
+}
+
+body {
+    font-family: var(--main-text-font);
+    color: var(--main-font-color);
+    font-size: 1.4rem;
+    background-color: var(--secontary);
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+}
+
+section {
+    margin: 8% 14%;
+}
+
+em {
+    color: var(--accent);
+    text-shadow: 1px 1px 3px var(--accent);
+    font-family: var(--neon-font);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+.question-text {
+    background-color: var(--transparent-black);
+    padding: 10px;
+}
+
+.btn {
+    font-family: var(--button-font);
+    font-size: 1.4rem;
+    background-color: var(--primary);
+    padding: 1% 5%;
+    border-radius: 50px;
+    border-color: var(--accent);
+}
+
+.btn:hover {
+    background-color: var(--accent);
+    color: var(--light-font);
+    background: linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+.next-container, .form-container, .restart-container{
+    display: flex;
+    justify-content: center;
+}
+
+#next, .show-correct {
+    display: none;
+}
+
+#result .score{
+    font-size: 2rem;
+}
+
+.num {
+    font-size: 2.5rem;
+    color: var(--accent);
+}
+
+#quiz-settings{width: 500px;}
+
+#quiz-settings select{border-radius: 50px;}
+
+.home-btn{
+    width: 160px;
+    font-size: 0.8rem;
+    padding: 8px;
+    border-color: var(--accent2);
+}
+
+.home-btn:hover {
+    background-color: var(--accent2);
+    background: linear-gradient(180deg, var(--primary) 0%, var(--accent2) 100%);
+    border-color: var(--accent2);
+}
+
+.counter .num{color:  var(--accent2);}
+
+.magenta-glow{text-shadow: 2px 2px 4px var(--accent2);font-family: var(--neon-font);}
+.blue-glow{text-shadow: 2px 2px 4px var(--accent);font-family: var(--neon-font);}
+
+
+.feedback-text{font-size: 2rem;}
+
+#correct-answer{
+    color: limegreen;
+    text-shadow: 2px 2px 4px lime;
+    font-size: 1.8rem;
+    font-family: var(--neon-font);
+}
+
+.form-select{font-size: 1.15rem;}
+
+.play-btns{width: 500px;}
+
+.error-reload button{width: 200px;}
+
+/* Footer */
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 4px 0;
+    font-size: 0.8rem;
+    background-color: var(--primary);
+    background: linear-gradient(120deg, rgba(68,68,68,0) 0%, var(--primary) 50%, rgba(68,68,68,0) 100%);
+}
+
+footer a{ 
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* ScrollBar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover);
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+    section {margin: 20% 1%;}
+
+    .play-btns, #quiz-settings{width: 90%;}
+
+    body{background-position: center;}
+
+}
